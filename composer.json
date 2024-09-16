@@ -1,0 +1,19 @@
+{
+    "name": "reinanbr/mille_php",
+    "description": "framework for microservices in php",
+    "type": "library",
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "Mille\\": ".Mille/"
+        }
+    },
+    "authors": [
+        {
+            "name": "reinanbr",
+            "email": "perseu912@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
