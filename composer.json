@@ -5,7 +5,7 @@
     "license": "mit",
     "autoload": {
         "psr-4": {
-            "Mille\\": ".Mille/"
+            "Mille\\": "./Mille/"
         }
     },
     "authors": [
