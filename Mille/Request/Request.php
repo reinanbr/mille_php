@@ -2,9 +2,16 @@
 
 
 namespace Mille\Request;
+use Mille\Request\ClientInfo;
 
-class Request{
-    
+class Request{    
+	private ClientRequest $client_info;
+
+	public function client_info($method){
+		$this->client_info = new ClientRequest($method);
+		return $this->client_info;
+	}
+
 	public static function getPath(){
         	$uri = $_SERVER["REQUEST_URI"] ?? "/";
         	$path = $uri;
@@ -33,3 +40,18 @@ class Request{
     	}
 }
 
+
+
+class ClientRequest{
+	public array $params = [];
+	private ClientInfo $client_info;
+
+
+	public function __construct(string $method)
+	{
+		$this->client_info = new ClientInfo();
+		if($method=='GET'){
+			$this->params = $this->client_info->getGetData();				
+		}	
+	}
+}
