@@ -3,7 +3,7 @@
 namespace Mille\App;
 
 use Mille\Request\Route;
-use Mille\Request\request;
+use Mille\Request\Request;
 use Mille\Request\Response;
 
 class App {

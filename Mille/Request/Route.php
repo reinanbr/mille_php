@@ -16,6 +16,10 @@ class Route extends Response{
 		$this->response = $response;
 	}
 
+	public function post(string $path, $call){
+		$this->routes['POST'][$path] = $call;
+	}
+
 	public function get(string $path, $call){
 		$this->routes['GET'][$path] = $call;
 	}
